@@ -109,6 +109,3 @@ Anything Apache Tika can parse — including but not limited to PDF, DOCX, XLSX,
 ## License
 
 See [license](license).
-
-
-
