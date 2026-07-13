@@ -48,25 +48,25 @@ Clone the repository and build the fat JAR with the Gradle wrapper:
 ./gradlew shadowJar
 ```
 
-The output will be at `build/libs/text-extract-1.0-all.jar`.
+The output will be at `build/libs/text-extract.jar`.
 
 ---
 
 ## Usage
 
 ```
-java -jar text-extract-1.0-all.jar -i <input-file> [options]
+java -jar text-extract.jar -i <input-file> [options]
 ```
 
 **Options**
 
-| Flag           | Default              | Description                                                                     |
-|----------------|----------------------|---------------------------------------------------------------------------------|
-| `-i <file>`    | *(required)*         | Path to the input document                                                      |
-| `-o <file>`    | `extracted-text.txt` | Path to write the extracted text                                                |
-| `-ocr`         | `false`              | Enable OCR for image-based content                                              |
-| `-lang <code>` | `eng`                | Tesseract language code(s) for OCR — combine multiple with `+` (e.g. `eng+deu`) |
-| `--help`       |                      | Print help and exit                                                             |
+| Flag                | Default              | Description                                                                     |
+|---------------------|----------------------|---------------------------------------------------------------------------------|
+| `-i <file>`         | *(required)*         | Path to the input document                                                      |
+| `-o <file>`         | `extracted-text.txt` | Path to write the extracted text                                                |
+| `-ocr`              | `false`              | Enable OCR for image-based content                                              |
+| `-lang <code>`      | `eng`                | Tesseract language code(s) for OCR — combine multiple with `+` (e.g. `eng+deu`) |
+| `-h, --help`        |                      | Print help and exit                                                             |
 
 ---
 
@@ -75,25 +75,25 @@ java -jar text-extract-1.0-all.jar -i <input-file> [options]
 Extract text from a PDF:
 
 ```sh
-java -jar text-extract-1.0-all.jar -i report.pdf -o report.txt
+java -jar text-extract.jar -i report.pdf -o report.txt
 ```
 
 Extract text from a scanned document using OCR:
 
 ```sh
-java -jar text-extract-1.0-all.jar -i scan.pdf -ocr -o scan.txt
+java -jar text-extract.jar -i scan.pdf -ocr -o scan.txt
 ```
 
 OCR with a specific language (German):
 
 ```sh
-java -jar text-extract-1.0-all.jar -i document.pdf -ocr -lang deu -o document.txt
+java -jar text-extract.jar -i document.pdf -ocr -lang deu -o document.txt
 ```
 
 Multiple languages can be combined with a `+` separator:
 
 ```sh
-java -jar text-extract-1.0-all.jar -i document.pdf -ocr -lang eng+deu -o document.txt
+java -jar text-extract.jar -i document.pdf -ocr -lang eng+deu -o document.txt
 ```
 
 If the output file already exists, the tool will prompt you to overwrite it, rename it, or cancel.

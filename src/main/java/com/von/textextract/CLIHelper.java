@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 import static java.lang.String.format;
 
-@CommandLine.Command(name = "processor", mixinStandardHelpOptions = true)
+@CommandLine.Command(name = "text-extract", mixinStandardHelpOptions = true)
 public class CLIHelper implements Runnable {
 
     @CommandLine.Spec

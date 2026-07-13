@@ -7,6 +7,12 @@ plugins {
 group = "com.von"
 version = "1.0"
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
 repositories {
     mavenCentral()
 }
@@ -16,6 +22,9 @@ application {
 }
 
 tasks.shadowJar {
+    archiveBaseName = "text-extract"
+    archiveVersion = ""
+    archiveClassifier = ""
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
     mergeServiceFiles()
 }

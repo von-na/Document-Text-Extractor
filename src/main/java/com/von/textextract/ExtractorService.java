@@ -20,7 +20,7 @@ public class ExtractorService {
 
     public ExtractorService() {
         this.tikaLoader = TikaLoader.loadDefault(getClass().getClassLoader());
-        log.info("TikaLoader initialized with default configuration");
+        log.debug("TikaLoader initialized with default configuration");
     }
 
     public void extractTextStreaming(String filePath, Writer writer, boolean ocrEnabled,
